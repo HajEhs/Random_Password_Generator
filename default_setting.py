@@ -1,4 +1,4 @@
-from errors import InvalidUserInput
+from errors import InvalidUserInputError
 
 password_generation_options = {
     "lowercase": True,
@@ -27,10 +27,10 @@ def change_default_setting():
                 print("-" * 20)
 
                 if user_input.lower() not in ['y', 'n']:
-                    raise InvalidUserInput
+                    raise InvalidUserInputError
                 return user_input
             
-            except InvalidUserInput:
+            except InvalidUserInputError:
                 print("Your input is invalid. Please try again.")
                 print("-" * 20)
 
