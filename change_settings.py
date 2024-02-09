@@ -1,4 +1,3 @@
-from default_setting import password_generation_options as settings
 from errors import InvalidUserInputError, LengthLimitError
 
 def change_settings(settings : dict):

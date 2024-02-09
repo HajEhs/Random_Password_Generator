@@ -1,14 +1,5 @@
 from errors import InvalidUserInputError
 
-password_generation_options = {
-    "lowercase": True,
-    "uppercase": True,
-    "symbol": False,
-    "number": True,
-    "space": False,
-    "length": 8,
-}
-
 def change_default_setting(settings : dict):
         print("Welcom to our app.", end=" ")
         print("This is our defualt setting.")
@@ -28,7 +19,10 @@ def change_default_setting(settings : dict):
 
                 if user_input.lower() not in ['y', 'n']:
                     raise InvalidUserInputError
-                return user_input
+                if user_input.lower() == "y":
+                    return True
+                else:
+                    return False
             
             except InvalidUserInputError:
                 print("Your input is invalid. Please try again.")
