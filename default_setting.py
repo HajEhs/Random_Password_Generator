@@ -9,11 +9,11 @@ password_generation_options = {
     "length": 8,
 }
 
-def change_default_setting():
+def change_default_setting(settings : dict):
         print("Welcom to our app.", end=" ")
         print("This is our defualt setting.")
 
-        for key,value in password_generation_options.items():
+        for key,value in settings.items():
             if value:
                 value  = "on"
             else:
