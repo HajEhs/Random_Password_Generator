@@ -27,6 +27,10 @@ def add_symbol():
     choice = random.choice([symbol_1, symbol_2, symbol_3])
     return chr(choice)
 
+def add_number():
+    choice = random.choice(range(0,10))
+    return choice
+
 def generate_random_password(true_options : list):
     my_password = ""
     
@@ -45,7 +49,15 @@ def generate_random_password(true_options : list):
         elif random_choice == "symbol":
             password = add_symbol()
             my_password += password
-            
+        
+        elif random_choice == "number":
+            password = add_number()
+            my_password += password
+        
+        else:
+            my_password += " "
+    
+    return my_password
             
     
 
