@@ -1,5 +1,5 @@
 import random
-from string import ascii_lowercase
+from string import ascii_lowercase, ascii_uppercase
 from default_setting import password_generation_options as settings
 
 def find_true_options(settings : dict):
@@ -15,6 +15,13 @@ def add_lowercase():
     choice = random.choice(ascii_lowercase)
     return choice
 
+def add_uppercase():
+    choice = random.choice(ascii_uppercase)
+    return choice
+
+
+    
+
 def generate_random_password(true_options : list):
     my_password = ""
     
@@ -25,6 +32,12 @@ def generate_random_password(true_options : list):
         if random_choice == "lowercase":
             password = add_lowercase()
             my_password += password
+        
+        elif random_choice == "uppercase":
+            password = add_uppercase()
+            my_password += password
+        
+        
             
             
             
