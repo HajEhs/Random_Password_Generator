@@ -5,16 +5,21 @@ def change_default_setting(settings : dict):
         print("This is our defualt setting.")
 
         for key,value in settings.items():
-            if value:
-                value  = "on"
+            if key == "length":
+                print(f"{key} is {value}.")
+                print("-" * 20)
+            
             else:
-                value = "off"
-            print(f"{key} is {value}.")
-            print("-" * 20)
+                if value:
+                    value  = "on"
+                else:
+                    value = "off"
+                print(f"{key} is {value}.")
+                print("-" * 20)
             
         while True:
             try:
-                user_input = input("Do you want to change default settings:[y/n] ")
+                user_input = input("Do you want to change default settings:[y:yse/ n:no] ")
                 print("-" * 20)
 
                 if user_input.lower() not in ['y', 'n']:

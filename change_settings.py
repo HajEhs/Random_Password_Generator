@@ -7,7 +7,7 @@ def change_settings(settings : dict):
         
         if key != "length":
             while True:
-                user_choice = input(f"Do you want to have {key}:[y/n] ")
+                user_choice = input(f"Do you want to have {key}:[y:yse/n:no] ")
                 print("-" * 20)
                 try:
                     if user_choice.lower() not in ['y', 'n', ""]:
@@ -23,7 +23,7 @@ def change_settings(settings : dict):
                         break       
 
                 except InvalidUserInputError:
-                    print("Your input is invalid.[y/n/enter]")
+                    print("Your input is invalid.[y:yse/n:no/enter:default]")
                     print("-" * 20)
         
         else:

@@ -56,9 +56,11 @@ def generate_random_password(true_options : list):
             password = add_number()
             my_password += password
         
-        else:
+        elif random_choice == "space":
             my_password += " "
-    
+
+        else:
+            pass
     return my_password
 
 
