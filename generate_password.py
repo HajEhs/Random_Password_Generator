@@ -1,5 +1,8 @@
 import random
 from string import ascii_lowercase, ascii_uppercase
+from errors import SettingsGenerationPasswordError
+
+from change_settings import change_settings, update_settings
 
 
 def add_lowercase():
@@ -31,11 +34,10 @@ def find_true_options(settings : dict):
             else:
                 true_options.append(option)
     return true_options
-
-
+        
 def generate_random_password(true_options : list):
     my_password = ""
-
+    
     len_password = true_options[-1]
     for password in range(len_password):
         random_choice = random.choice(true_options)

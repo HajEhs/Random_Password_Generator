@@ -47,4 +47,7 @@ def ask_generate_random_password_again(random_password):
             
 random_password = generate_first_random_password()
 final_password = ask_generate_random_password_again(random_password)
-print(final_password)
+
+with open("password.txt", mode='a') as file:
+    file.write(final_password)
+    file.write("\n------------------------\n")

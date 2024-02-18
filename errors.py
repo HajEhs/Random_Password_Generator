@@ -3,3 +3,6 @@ class InvalidUserInputError(Exception):
 
 class LengthLimitError(Exception):
     pass
+
+class SettingsGenerationPasswordError(Exception):
+    pass
